@@ -6,7 +6,7 @@
 
 效果图：
 
-![image](http://wx3.sinaimg.cn/large/bcc7d265gy1frudowju9ag20go0tnx2a.gif)
+![image](http://wx2.sinaimg.cn/large/bcc7d265gy1fruldypvheg20go0tnqkn.gif)
 
 
 ### 代码说明(实现方案)

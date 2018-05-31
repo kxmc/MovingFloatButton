@@ -24,13 +24,13 @@
 
             <io.github.ccmagic.movingfloatbutton.FloatMovingView
                 android:id="@+id/float_moving_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:text="色块内滑动"
                 android:textColor="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:background="@mipmap/float_moving_btn" />
+                android:background="@drawable/button_bg_1" />
 
             <!--<View-->
             <!--android:layout_width="100dp"-->
@@ -42,13 +42,13 @@
 
     <io.github.ccmagic.movingfloatbutton.FloatMovingView
         android:id="@+id/full_screen_float_moving_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:text="全屏滑动"
         android:textColor="@color/mediumPurple"
         android:gravity="center"
         android:layout_gravity="center"
-        android:background="@mipmap/float_moving_btn" />
+        android:background="@drawable/button_bg_1" />
 </RelativeLayout>
 
 

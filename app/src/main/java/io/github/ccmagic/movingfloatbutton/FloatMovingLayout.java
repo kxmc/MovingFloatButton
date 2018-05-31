@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 
@@ -50,9 +51,9 @@ public class FloatMovingLayout extends RelativeLayout {
 
         mView = new SonView(context);
         mView.setText("色块内滑动");
-        mView.setGravity(CENTER_IN_PARENT);
+        mView.setGravity(Gravity.CENTER);
         mView.setLayoutParams(new LayoutParams(150, 150));
-        mView.setBackgroundResource(R.mipmap.float_moving_btn);
+        mView.setBackgroundResource(R.drawable.button_bg_1);
         addView(mView);
 
     }
