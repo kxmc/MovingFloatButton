@@ -49,6 +49,8 @@ public class FloatMovingLayout extends RelativeLayout {
 
 
         mView = new SonView(context);
+        mView.setText("色块内滑动");
+        mView.setGravity(CENTER_IN_PARENT);
         mView.setLayoutParams(new LayoutParams(150, 150));
         mView.setBackgroundResource(R.mipmap.float_moving_btn);
         addView(mView);
@@ -99,7 +101,6 @@ public class FloatMovingLayout extends RelativeLayout {
         public boolean onTouchEvent(MotionEvent event) {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_DOWN:
-                    //
                     getParentLocationOnScreen();
                     allMinusX = screenX + getMeasuredWidth() / 2;
                     allMinusY = screenY + getMeasuredHeight() / 2;
@@ -107,9 +108,9 @@ public class FloatMovingLayout extends RelativeLayout {
                     scrollMaxY = -FloatMovingLayout.this.getMeasuredHeight() + getMeasuredHeight();
                     break;
                 case MotionEvent.ACTION_MOVE:
-
                     actualX = -(int) (event.getRawX() - allMinusX);
                     actualY = -(int) (event.getRawY() - allMinusY);
+                    //防止滑动出界
                     if (actualX >= 0) {
                         actualX = 0;
                     }

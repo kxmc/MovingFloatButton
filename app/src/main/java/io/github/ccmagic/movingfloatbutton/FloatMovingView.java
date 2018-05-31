@@ -75,18 +75,15 @@ public class FloatMovingView extends AppCompatTextView {
                     mDefaultBottomTranslationY = mParentViewGroup.getMeasuredHeight() - getBottom();
                     mFirstMain = false;
                 }
-
                 mPreX = event.getRawX();
                 mPreY = event.getRawY();
                 break;
             case MotionEvent.ACTION_MOVE:
                 mActualX = event.getRawX();
                 mActualY = event.getRawY();
-
                 mTranslationX = getTranslationX() + mActualX - mPreX;
                 mTranslationY = getTranslationY() + mActualY - mPreY;
-
-                //防止移动出界
+                //防止滑动出界
                 if (mTranslationX < -mDefaultTopTranslationX) {
                     mTranslationX = -mDefaultTopTranslationX;
                 }
@@ -100,7 +97,6 @@ public class FloatMovingView extends AppCompatTextView {
                 if (mTranslationY > mDefaultBottomTranslationY) {
                     mTranslationY = mDefaultBottomTranslationY;
                 }
-
                 setTranslationX(mTranslationX);
                 setTranslationY(mTranslationY);
                 //
