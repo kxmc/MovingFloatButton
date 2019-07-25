@@ -1,23 +1,24 @@
 package io.github.ccmagic.movingfloatbutton;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 
 /**
- * Created by ccMagic on 2018/5/24.
- * Copyright ：
- * Version ：
- * Reference ：
- * Description ：
+ * 能在父布局中跟随手指滑动自由移动的View，
+ * 其中AppCompatTextView可以替换成任何View，比如ImageView
+ *
+ * @author kxmc
+ * @date 2018/5/24.
  */
 public class FloatMovingView extends AppCompatTextView {
 
-
-    private static final String TAG = "FloatMovingView";
+    /**
+     * 将这些变量都放到这里是为了避免重复创建引用
+     * */
     private float mActualX;
     private float mActualY;
 
@@ -55,6 +56,7 @@ public class FloatMovingView extends AppCompatTextView {
         super(context, attrs, defStyleAttr);
     }
 
+    @Override
     public void setOnClickListener(OnClickListener onClickListener) {
         mOnClickListener = onClickListener;
     }
