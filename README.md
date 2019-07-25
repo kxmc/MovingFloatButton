@@ -1,5 +1,5 @@
 
-# MovingFloatButton
+# MovingFloatButton(实际上什么类型的View甚至ViewGroup都可以)
 
 ### 项目介绍
 自定义悬浮滑动按钮，支持在父布局中跟随手指滑动，提供了两种实现方案。
